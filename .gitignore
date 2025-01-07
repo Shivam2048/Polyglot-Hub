@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE/editor-specific files (VS Code, WebStorm, etc.)
+.vscode/
+.idea/
+
+
+# Dependency directory for front-end frameworks ( React)
+node_modules/
+
+# Coverage folder (for testing)
+coverage/
+
+# IDE config files
+*.sublime-workspace
+*.sublime-project
+
+# Logs from npm/yarn
+*.tgz

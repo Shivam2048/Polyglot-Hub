@@ -1,0 +1,43 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #004085;
+    top: 0;
+    position: sticky;
+    z-index: 1000
+    
+}
+
+.Navigation{
+    width: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Logo{
+    width: 6.3rem;
+    height: 5.3rem;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.Logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.Navigation a{
+    text-decoration: none;
+    color: #F8F9FA;
+    font-size: 1.2rem;
+}
+
+.footer{
+    height: 13rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;  
+}

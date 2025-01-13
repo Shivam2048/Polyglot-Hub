@@ -13,6 +13,7 @@ body{
     height: 100vh;
 }
 
+/* Header Styling */
 .head-box{
     display: flex;
     flex-direction: row;
@@ -49,6 +50,55 @@ body{
     font-size: 1.2rem;
     font-weight: 500;
 }
+
+/* Footer Styling */
+.footer {
+    background-color: #004085;
+    color: #F8F9FA;
+    /* padding: 20px 15px; */
+    padding: 1.4rem 0.9rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .footer-content h4 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .footer-content p {
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+  }
+  
+  .footer-links, .footer-socials {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-links a, .footer-socials a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover, .footer-socials a:hover {
+    color: #28A745; /* Original green for hover */
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  
 
 .box-container{
     margin: 8rem 0rem;

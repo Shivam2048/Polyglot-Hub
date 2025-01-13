@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="/images/WithoutTextLogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Polygloth Hub</title>
 </head>
 <body>
-    <%- include("partials/header.ejs"); %>
+    <div class="body">
+        <%- include("partials/header.ejs"); %>
+        <div class="box-container">
+            <div class="box">
+                <h3>Translation & Language Detection </h3>
+                <p>"Effortlessly detect the language of any text and translate it into your preferred language. Break down language barriers with accurate detection and seamless translation in one place."</p>
+                <button class="box-button">Explore Now</button>
+            </div>
+            <div class="box">
+                <h3>Dictionary</h3>
+                <p>"Discover meanings, synonyms, and more with our comprehensive dictionary. Enhance your vocabulary with quick and accurate word definitions, tailored for your learning needs."</p>
+                <button class="box-button">Explore Now</button>
+            </div>
+            <div class="box">
+                <h3>Sentiment Analysis</h3>
+                <p>"Uncover the sentiment behind any text, from positivity to negativity and everything in between. Gain deeper insights and understand emotions through advanced sentiment analysis."</p>
+                <button class="box-button">Explore Now</button>
+            </div>
+        </div>
+        <%- include("partials/footer.ejs"); %>
+    </div>
+    
 </body>
 </html>

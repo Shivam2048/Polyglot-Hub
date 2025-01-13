@@ -120,7 +120,7 @@ body{
     background-color: #F8F9FA;
     border:0.15rem solid #004085;
     box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, text-decoration 0.3s ease;
     padding: 1rem;
 }
 
@@ -128,6 +128,11 @@ body{
     transform: scale(1.05);
     box-shadow: 0rem 0.6rem 1.2rem rgba(0, 0, 0, 0.6);
 }
+
+.box:hover p {
+    text-decoration: underline; /* Underline the paragraph when the box is hovered */
+    text-decoration-color: #5D8A47;
+  }
 
 .box p{
     width: 85%;

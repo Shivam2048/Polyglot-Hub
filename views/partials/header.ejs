@@ -10,17 +10,39 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <nav class="head-box">
+    <div class="head-box">
         <div class="head-logo">
             <a href="/home"><img src="/images/Polygloth.png" alt="logo"></a>
             
         </div>
-        <div class="head-navigation">
-            <a href="/home">Home</a>
-            <a href="/translate">Translation</a>
-            <a href="/dictionary">Dictionary</a>
-            <a href="/sentiment">Sentiment</a>
-        </div>
-    </nav>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar() ><a href="#"><i class="fa-solid fa-xmark crossI"></i></a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/translate">Translation</a></li>
+                <li><a href="/dictionary">Dictionary</a></li>
+                <li><a href="/sentiment">Sentiment</a></li>
+            </ul>
+            <ul>
+                <li class="hideOnIpad"><a href="/translate">Translation</a></li>
+                <li class="hideOnIpad"><a href="/home">Home</a></li>
+                <li class="hideOnIpad"><a href="/dictionary">Dictionary</a></li>
+                <li class="hideOnIpad"><a href="/sentiment">Sentiment</a></li>
+                <li class="menuButton" onclick=showShidebar() ><a href="#"><i class="fa-solid fa-bars barI"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script>
+        function showShidebar(){
+            const sidebar= document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
+        }
+    </script>
 </body>
 </html>

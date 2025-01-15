@@ -7,12 +7,16 @@ const port= 2000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true })); 
 
-app.use('/', (req,res) => {
+app.get('/', (req,res) => {
     res.render('home.ejs');
 });
 
-app.use('/home', (req,res) => {
+app.get('/home', (req,res) => {
     res.render('home.ejs');
+});
+
+app.get('/translate', (req,res) => {
+    res.render('translang.ejs');
 });
 
 app.listen(port, () => {

@@ -58,6 +58,10 @@ app.post('/translate', async (req,res) => {
 
 });
 
+app.get('/dictionary',(req,res) => {
+    res.render('dictionary.ejs');
+})
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

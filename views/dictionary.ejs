@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/secondary.css">
+    <link rel="icon" href="/images/WithoutTextLogo.png">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="body">
+        <%- include("partials/header.ejs"); %>
+        <div class="dict-main">
+            <h1>Know about the word</h1>
+            <div class="dict-req">
+                <h2 id="submitWord">Submit Your Word</h2>
+                <form action="/translate" method="post" class="dict-form">
+                    <textarea name="userInput" id="word-textarea" placeholder="Enter your word here..."></textarea>
+                    <button class="find-button" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="dict-res">
+               <% if(locals.mean){ %>
+                    <h2>Meaning:</h2>
+                    <p> <%= mean %> </p>
+                <% } %>
+                <% if(locals.audio){ %>
+                    <h2>Audio:</h2>
+
+                <% } %>
+                <% if(locals.syno){ %>
+                    <h2>Synonyms:</h2>
+                    <p> <%= syno %> </p>
+                <% } %>
+                <% if(locals.anto){ %>
+                    <h2>Antonyms:</h2>
+                    <p> <%= anto %> </p>
+                <% } %>
+            </div>
+        </div>
+        <%- include("partials/footer.ejs"); %>
+    </div>
+</body>
+</html>

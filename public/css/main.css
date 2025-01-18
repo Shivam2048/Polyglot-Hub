@@ -12,139 +12,7 @@ body{
     height: 100vh;
 }
 
-/* Header Styling */
-.head-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #004085;
-    top: 0;
-    position: sticky;
-    z-index: 100;
-    
-}
 
-nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-nav li{
-    height: 50px;
-}
-
-nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #F8F9FA;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-nav a:hover{
-    background-color: #003366;
-} 
-
-.barI{
-    font-size: 1.4rem;
-}
-
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(0, 64, 128, 0.7);
-    backdrop-filter:blur(8px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.sidebar li{
-    width: 100%;
-}
-
-.sidebar a{
-    width: 100%;
-}
-
-.crossI{
-    font-size: 1.5rem;
-}
-
-.head-logo{
-    width: 6.3rem;
-    height: 5.3rem;
-    margin-top: 0.3rem;
-    margin-left: 0.5rem;
-    padding-bottom: 0.3rem;
-}
-
-.head-logo img{
-    width: 100%;
-    height: 100%;
-}
-
-.menuButton{
-    display: none;
-}
-
-/* Footer Styling */
-.footer {
-    background-color: #004085;
-    color: #F8F9FA;
-    padding: 1.4rem 0.9rem;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-  
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-}
-  
-.footer-content h4 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-  
-.footer-content p {
-    font-size: 0.9rem;
-    margin: 5px 0 0;
-}
-  
-.footer-links, .footer-socials {
-    display: flex;
-    gap: 10px;
-}
-  
-.footer-links a, .footer-socials a {
-    color: #F8F9FA;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-  
-.footer-links a:hover, .footer-socials a:hover {
-    color: #28A745; /* Original green for hover */
-}
-  
-.footer-bottom {
-    margin-top: 10px;
-    font-size: 0.8rem;
-}
   
 
 .box-container{
@@ -226,12 +94,6 @@ nav a:hover{
     .box-container{
         gap: 3rem;
     }
-    .hideOnIpad{
-        display: none;
-    }
-    .menuButton{
-        display: block;
-    }
 }
 
 @media (max-width: 650px) {
@@ -240,11 +102,5 @@ nav a:hover{
     }
     .box-container{
         gap: 3rem;
-    }
-    .sidebar{
-        width: 100%;
-    }
-    .menuButton{
-        display: block;
     }
 }

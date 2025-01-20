@@ -17,25 +17,28 @@
             <h1>Know about the word</h1>
             <div class="dict-req">
                 <h2 id="submitWord">Submit Your Word</h2>
-                <form action="/translate" method="post" class="dict-form">
+                <form action="/dictionary" method="post" class="dict-form">
                     <textarea name="userInput" id="word-textarea" placeholder="Enter your word here..."></textarea>
                     <button class="find-button" type="submit">Submit</button>
                 </form>
             </div>
             <div class="dict-res">
+                <% if(locals.word){ %>
+                    <h2> <%= word %> </h2>
+                <% } %>
                <% if(locals.mean){ %>
                     <h2>Meaning:</h2>
                     <p> <%= mean %> </p>
                 <% } %>
-                <% if(locals.audio){ %>
+                <% if(locals.audio && audio!=null){ %>
                     <h2>Audio:</h2>
-
+                    <audio controls src="<%= audio %>">Your browser does not support the audio element.</audio>
                 <% } %>
-                <% if(locals.syno){ %>
+                <% if(locals.syno && syno!=null){ %>
                     <h2>Synonyms:</h2>
                     <p> <%= syno %> </p>
                 <% } %>
-                <% if(locals.anto){ %>
+                <% if(locals.anto && anto!=null){ %>
                     <h2>Antonyms:</h2>
                     <p> <%= anto %> </p>
                 <% } %>

@@ -121,6 +121,55 @@ app.post('/dictionary', async (req,res) => {
     }
 });
 
+app.get('/sentiment', (req,res) => {
+    res.render('sentiment.ejs');
+});
+
+app.post('/sentiment', async (req,res) => {
+    let userInput = req.body.userInput;
+
+    if (!userInput || userInput.trim() === "") {
+        return res.status(400).send("Invalid input: Please provide a valid text.");
+    }
+
+    try {
+        const Sresponse= await axios.post('https://api.meaningcloud.com/sentiment-2.1',
+            {
+                key: '7f81e12da002f681b1345ed2e00e4056',
+                txt: userInput,
+                lang: 'en',
+            }, {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            }
+        );
+
+        if (Sresponse.data && Sresponse.data.sentence_list) {
+            const Sresult= Sresponse.data;
+
+            console.log(Sresult.sentence_list[0].text);
+            console.log(Sresult.score_tag);
+
+            const sentiAnalasis={
+                wrd: Sresult.sentence_list[0].text,
+                senti: Sresult.score_tag 
+            };
+
+            res.render('sentiment.ejs',sentiAnalasis);
+
+        } else {
+            console.log("No data found for this text");
+            res.status(404).send("No data found for this text");
+        }
+
+    } catch (error) {
+        console.error("Error in /sentiment route:", error.message);
+        res.status(500).send("An error occurred while processing your request.");
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
